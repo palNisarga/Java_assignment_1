@@ -1,8 +1,8 @@
 package project1;
 import java.util.*;
 
-public class Depature {
-    public static void ToDepart(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
+public class depature {
+    public static void to_depart(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
         if(occupied.isEmpty()) {
             System.out.println("No cars in the slot!");
         }else {
