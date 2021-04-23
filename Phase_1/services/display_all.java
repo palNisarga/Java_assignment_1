@@ -2,7 +2,7 @@ package project1;
 import java.util.*;
 import java.text.SimpleDateFormat;
 
-public class display{
+public class display_all{
     public static void show_all(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
         if(occupied.isEmpty()) {
             System.out.println("No cars in the slot!");
