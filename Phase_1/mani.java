@@ -31,26 +31,26 @@ public class Main  {
             menu = input.nextInt();
             switch (menu) {
                 case 1: {
-                	AllotSlot a=new AllotSlot();
-                	a.Slot(avail,occupied,level_1);        
+                	allot_slot a=new allot_slot();
+                	a.car(avail,occupied,level_1);        
                     break;
                 }
                 case 2: {
                
-                Depature b = new Depature();
-                b.ToDepart(avail,occupied,level_1);
+                depature b = new depature();
+                b.to_depart(avail,occupied,level_1);
                 break;
                    
                 }
                 case 3: {
-                	Display c=new Display();
-                	c.ShowAll(avail,occupied,level_1);
+                	display_all c=new display_all();
+                	c.show_all(avail,occupied,level_1);
 
                     break;
                 }
                 case 4: {
-                	SearchCar d= new SearchCar();
-                	d.toSearch(avail,occupied,level_1);
+                	search_car d= new search_car();
+                	d.to_search(avail,occupied,level_1);
                 }
 
                 case 0: {
