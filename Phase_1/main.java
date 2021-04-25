@@ -50,7 +50,7 @@ public class Main  {
                 }
                 case 4: {
                 	getParkingSlot d= new getParkingSlot();
-                	d.ParkingSlot(avail,occupied,level_1);
+                	d.search(avail,occupied,level_1);
                 }
 
                 case 0: {
