@@ -2,7 +2,7 @@ package project1;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class setSlot {
+public class SetSlot {
     public static void AllotSlot(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
         Scanner input = new Scanner(System.in);
         String floor = " ";
