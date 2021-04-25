@@ -8,7 +8,7 @@ import project1.SearchCar;
 
 public class Main  {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)throws IOException, SQLException {
        
         ArrayList<Integer> avail = new ArrayList<Integer>();
         Collections.addAll(avail, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
