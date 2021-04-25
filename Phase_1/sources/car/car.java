@@ -2,8 +2,8 @@ package project1;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class allot_slot {
-    public static void car(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
+public class setSlot {
+    public static void AllotSlot(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
         Scanner input = new Scanner(System.in);
         String floor = " ";
         List<String> array = new ArrayList<String>(10);
