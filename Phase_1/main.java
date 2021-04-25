@@ -31,7 +31,7 @@ public class Main  {
             menu = input.nextInt();
             switch (menu) {
                 case 1: {
-                	ToAllotSlot a=new ToAllotSlot();
+                	setSlot a=new settSlot();
                 	a.AllotSlot(avail,occupied,level_1);        
                     break;
                 }
