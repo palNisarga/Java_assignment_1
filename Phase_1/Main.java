@@ -32,7 +32,7 @@ public class Main  {
             switch (menu) {
                 case 1: {
                 	SetSlot a=new SettSlot();
-                	a.AllotSlot(avail,occupied,level_1);        
+                	a.getSlotNumber(avail,occupied,level_1);        
                     break;
                 }
                 case 2: {
