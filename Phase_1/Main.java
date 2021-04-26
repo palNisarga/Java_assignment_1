@@ -50,7 +50,7 @@ public class Main  {
                 }
                 case 4: {
                 	search d= new search();
-                	d.getParkingSlot(avail,occupied,level_1);
+                	d.searchCarByColorAndRegNo(avail,occupied,level_1);
                 }
 
                 case 0: {
