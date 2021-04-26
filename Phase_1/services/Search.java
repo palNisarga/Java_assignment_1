@@ -3,7 +3,7 @@ import java.util.*;
 import java.text.SimpleDateFormat;
 
 public class Search {
-    public static void getParkingSlot(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
+    public static void searchCarByColorAndRegNo(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
         if(occupied.isEmpty()) {
             System.out.println("No cars in the slot!");
         }else {
