@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class SetSlot {
-    public static void AllotSlot(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
+    public static void getSlotNumber(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
         Scanner input = new Scanner(System.in);
         String floor = " ";
         List<String> array = new ArrayList<String>(10);
