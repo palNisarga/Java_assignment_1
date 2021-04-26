@@ -19,7 +19,7 @@ public class Main  {
         List<Integer> occupied = new ArrayList<Integer>();
         Scanner input = new Scanner(System.in);
         int menu;
-        Hashtable<Integer, List<String>> level_1 = new Hashtable<Integer, List<String>>();
+        Hashtable<Integer, List<String>> Level1 = new Hashtable<Integer, List<String>>();
         do {
             System.out.println("WELCOME TO PARKING MANAGEMENT");
             System.out.println("1: To Park Vehicle");
