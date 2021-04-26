@@ -2,7 +2,7 @@ package project1;
 import java.util.*;
 import java.text.SimpleDateFormat;
 
-public class search {
+public class Search {
     public static void getParkingSlot(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
         if(occupied.isEmpty()) {
             System.out.println("No cars in the slot!");
