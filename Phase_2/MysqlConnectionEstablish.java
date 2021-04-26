@@ -2,7 +2,7 @@ package parking_lot_management;
 
 import java.sql.*;
 
-public class Mysql{  
+public class MysqlConnectionEstablish{  
 	public static void main() {
 	try{  
 		Class.forName("com.mysql.jdbc.Driver");  
