@@ -2,8 +2,8 @@ package project1;
 import java.util.*;
 import java.text.SimpleDateFormat;
 
-public class getAllParkedCars{
-    public static void AllParkedCars(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
+public class DisplayAll{
+    public static void getAllParkedCars(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
         if(occupied.isEmpty()) {
             System.out.println("No cars in the slot!");
         }else {
