@@ -31,7 +31,7 @@ public class Main  {
             menu = input.nextInt();
             switch (menu) {
                 case 1: {
-                	setSlot a=new settSlot();
+                	SetSlot a=new SettSlot();
                 	a.AllotSlot(avail,occupied,level_1);        
                     break;
                 }
@@ -43,14 +43,14 @@ public class Main  {
                    
                 }
                 case 3: {
-                	getAllParkedCars c=new getAllParekedCars();
-                	c.AllParkedCars(avail,occupied,level_1);
+                	DisplayAll c=new DisplayAll();
+                	c.getAllParkedCars(avail,occupied,level_1);
 
                     break;
                 }
                 case 4: {
-                	getParkingSlot d= new getParkingSlot();
-                	d.search(avail,occupied,level_1);
+                	search d= new search();
+                	d.getParkingSlot(avail,occupied,level_1);
                 }
 
                 case 0: {
