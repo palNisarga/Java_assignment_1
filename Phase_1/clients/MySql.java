@@ -1,7 +1,7 @@
 package project1;
 
 import java.sql.*;
-public class MySQL {
+public class MySql {
 	public Connection create() {
 		Connection con= null;
 		try{  
