@@ -3,9 +3,9 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class SetSlot {
-    public static void getSlotNumber(ArrayList<Integer> avail, List<Integer> occupied,Hashtable<Integer, List<String>> level_1) {
+	public static void getSlotNumber(ArrayList<Integer> Avails, List<Integer> Occupied,Hashtable<Integer, List<String>> Level) {
         Scanner input = new Scanner(System.in);
-        String floor = " ";
+		String floor = " ";
         List<String> array = new ArrayList<String>(10);
         Date date = new Date();
                 SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy,E HH:mm:ss");
@@ -18,7 +18,7 @@ public class SetSlot {
                 String regPlate = input.next();
                
                 System.out.println("Alloting a slot..."+"\n");
-                int min = (int) Collections.min(avail);
+                int min = (int) Collections.min(Avails);
                
                 if(min<100)
                 {
@@ -49,10 +49,10 @@ public class SetSlot {
                 array.add(colour);
                 array.add(floor);
                 array.add(strDate);
-                avail.remove(avail.indexOf(min));
-                occupied.add(min);
-                level_1.put(min,array);
+                Avails.remove(Avails.indexOf(min));
+                Occupied.add(min);
+                Level.put(min,array);
                
                 System.out.println("Floor: "+floor+"\n"+"Slot no: "+min+"\n"+"Colour:"+colour+"\n"+"Reg Plate:"+regPlate+"\n"+"Date:"+strDate+"\n\n");
-    }
+	}
 }
