@@ -16,13 +16,13 @@ public class MysqlService {
     	
     	System.out.println("Alloting a slot..."+"\n");
     	Statement stmt= con.createStatement();
-    	String sltQuery = "Select * from vehicle";
+    	String sltQuery = "Select * from ParkingSystem";
     	ResultSet rs = stmt.executeQuery(sltQuery);
     	boolean flag=false;
     	while(rs.next()) {
     		if(rs.getString(2)==null) {
     			try {
-    			String updQuery = "UPDATE vehicle SET registrationNumber=?,colour=?,time=NOW() WHERE slot=?;";
+    			String updQuery = "UPDATE ParkingSystem SET registrationNumber=?,colour=?,time=NOW() WHERE slot=?;";
     			PreparedStatement statement = con.prepareStatement(updQuery);
     			statement.setString(1, regPlate);
     			statement.setString(2, colour);
@@ -40,7 +40,7 @@ public class MysqlService {
     	}
     	if(!flag) {
     		try{
-    			String insQuery = "INSERT INTO vehicle(registrationNumber,colour,time) values(?,?,NOW());";
+    			String insQuery = "INSERT INTO ParkingSystem(registrationNumber,colour,time) values(?,?,NOW());";
     			PreparedStatement statement = con.prepareStatement(insQuery);
     			statement.setString(1, regPlate);
     			statement.setString(2, colour);
@@ -51,14 +51,14 @@ public class MysqlService {
                 System.out.println(throwable.getMessage());
             }
     	}
-         String sltQuery2 = "SELECT * FROM vehicle WHERE registrationNumber=?;";
+         String sltQuery2 = "SELECT * FROM ParkingSystem WHERE registrationNumber=?;";
          PreparedStatement statement = con.prepareStatement(sltQuery2);
          statement.setString(1, regPlate);
          ResultSet rs1 = statement.executeQuery();
          while (rs1.next()) {
         	 System.out.println("__Ticket__");
         	 System.out.println("Registration Number:"+rs1.getString(2));
-        	 System.out.println("Vehicle Colour :"+rs1.getString(3));
+        	 System.out.println("ParkingSystem Colour :"+rs1.getString(3));
         	 System.out.println("Entry Time :"+rs1.getTimestamp(4));
         	 System.out.println("Slot Number :"+ rs1.getInt(1));
          	}
@@ -67,7 +67,7 @@ public class MysqlService {
 	public static void ToRemoveFromSlot(){
         System.out.println("Enter Reg Plate");
     	String regPlate = input.next();
-        String updQuery2="UPDATE vehicle SET registrationNumber=?,colour=?,time=? WHERE registrationNumber=?";
+        String updQuery2="UPDATE ParkingSystem SET registrationNumber=?,colour=?,time=? WHERE registrationNumber=?";
         try {
             PreparedStatement statement=con.prepareStatement(updQuery2);
             statement.setString(1,null);
@@ -88,7 +88,7 @@ public class MysqlService {
 	                Scanner sc = new Scanner(System.in);
 	                System.out.print("Enter Color to be searched  : ");
 	                String color=sc.next();
-	                String query1="select registrationNumber from vehicle where colour='"+color+"'";
+	                String query1="select registrationNumber from ParkingSystem where colour='"+color+"'";
 	                ResultSet rs = stmt.executeQuery(query1);
 	                while (rs.next()) {
 	                    String registrationNumber = rs.getObject(1).toString();
@@ -100,13 +100,13 @@ public class MysqlService {
 	            }
 	        }
 
-	public static void getSlotNumberByRegNumber(){
+	public static void SearchSlotByRegNumber(){
 	            try {
 	                Statement stmt = con.createStatement();
 	                Scanner sc = new Scanner(System.in);
 	                System.out.println("Enter Registration Number to be searched : ");
 	                String registrationNumber = sc.next();
-	                String query1 = "select slot from vehicle where registrationNumber='" + registrationNumber + "' ";
+	                String query1 = "select slot from ParkingSystem where registrationNumber='" + registrationNumber + "' ";
 	                ResultSet rs = stmt.executeQuery(query1);
 	                while (rs.next()) {
 	                    String slotNumber = rs.getObject(1).toString();
@@ -118,13 +118,13 @@ public class MysqlService {
 	            }
 	        }
 
-	public static void getSlotNumberByColor(){
+	public static void searchSlotByColor(){
 	            try {
 	                Statement stmt = con.createStatement();
 	                Scanner sc = new Scanner(System.in);
 	                System.out.println("Enter Vehicle Color to be searched  : ");
 	                String color = sc.next();
-	                String query1 = "select slot from vehicle where colour='" + color + "' ";
+	                String query1 = "select slot from ParkingSystem where colour='" + color + "' ";
 	                ResultSet rs = stmt.executeQuery(query1);
 	                while (rs.next()) {
 	                    String slotNumber = rs.getObject(1).toString();
