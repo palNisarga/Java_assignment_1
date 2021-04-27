@@ -17,28 +17,28 @@ public class Main {
       
 		switch(menu) {
 			case(1):
-				MysqlDB.SetSlot();
+				MysqlService.SetSlot();
 				break;
 			case(2):
-				MysqlDB.ToRemoveFromSlot();
+				MysqlService.ToRemoveFromSlot();
 				break;
 			case(3):
-				MysqlDB.getSlotNumberByRegNumber();
+				MysqlService.getSlotNumberByRegNumber();
 				break;
-      case(4):
-				MysqlDB.SearchCarByColor();
+                        case(4):
+				MysqlService.SearchCarByColor();
 				break;
-      case(5):
-				MysqlDB.SearchSlotByColor();//
+                        case(5):
+				MysqlService.SearchSlotByColor();//
 				break;
 			case(0):
-         System.out.println("\nThank you!\n");
-	       break;
-       default: {
-	        System.out.println("Invalid option!\n");
+                               System.out.println("\nThank you!\n");
+	                       break;
+                   default: {
+	             System.out.println("Invalid option!\n");
 	         //break;
-	        }
-			  }	
+	                    }
+		      }	
 		}
 		while(menu!=0);
 		
